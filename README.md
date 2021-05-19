@@ -5,6 +5,6 @@
 
 *Data availability:*
 
-(a) Nonlinearity: Raw data used to produce all experimental figures in the manuscript (Figs. 3 and 4) are available in folders *SPADs* and *SNSPD*. Speciffic datasets are arranged in the three columns: detection rate recorded for the beam A, for the beam B, and for both beams simultaneously impinging the detector AB. Each illumination level is repeated 30 times. 
+(a) Nonlinearity: Raw data used to produce all experimental figures in the manuscript (Figs. 3 and 4) are available in folders *SPADs* and *SNSPD*. Speciffic datasets are arranged in the three columns: detection rate recorded for the beam A, for the beam B, and for both beams simultaneously impinging the detector AB. Each illumination level is repeated 30 times. Measurement time was set to 20 s.
 
 (b) Relative Allan deviation: Data from stability measurement and Python script to calculate relative Allan deviation are avaible in the folder *Stability*
