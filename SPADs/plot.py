@@ -98,7 +98,7 @@ Tmeas = 20
 xcount	= []
 nlcount	= []
 for i in range(1,num+1,1):
-	xcount.append(AQ4C.T[2][(i-1)*rep:(i)*rep])
+	xcount.append(COUNT.T[2][(i-1)*rep:(i)*rep])
 	nlcount.append(NL(COUNT.T[0][(i-1)*rep:(i)*rep],COUNT.T[1][(i-1)*rep:(i)*rep],COUNT.T[2][(i-1)*rep:(i)*rep]))
 # COUNT x,xerr
 Xcount     = np.mean(xcount,axis=1)/Tmeas
@@ -178,8 +178,8 @@ y2=-0.04
 ax3.errorbar(x[2], y[2], yerr[2], xerr[2], fmt='o', color="black")
 ax3.axhline(linewidth=4, color='white')
 ax3.axhline(y1, color = 'black', lw=1)
-ax3.text(400, -0.075, '$\parallel$', fontsize=des, fontweight='normal', color='black', rotation=-30)
-ax3.text(0.6*10**6, -0.075, '$\parallel$', fontsize=des, fontweight='normal', color='black', rotation=-30)
+ax3.text(20, -0.16, '$\parallel$', fontsize=des, fontweight='normal', color='black', rotation=-30)
+ax3.text(4*10**5, -0.16, '$\parallel$', fontsize=des, fontweight='normal', color='black', rotation=-30)
 ax3.axhline(y2, color = 'black', lw=1)
 ax3.set_ylabel(r'$\Delta$',size=fontsize)
 ax3.set_xlabel(r'$R_{AB}^{det}$ [Hz]',size=fontsize)
