@@ -1,10 +1,36 @@
 # Experimental observation of anomalous supralinear response of single-photon detectors
 Josef Hloušek, Ivo Straka, Miroslav Ježek (Palacký University Olomouc)
 
-A vast majority of radiometric, spectroscopic, imaging, and optical communication methods rely on comparing light intensity levels measured by a photonic detector. The measurement accuracy is impaired by any deviation from the linear response of the detector, which leads to systematic errors. We present a direct single-source method for absolute measurement of nonlinearity to characterize the response of an arbitrary single-photon detector, namely several actively and passively quenched single-photon avalanche diodes (SPADs) and superconducting nanowire single-photon detectors (SNSPDs). The presented method does not require a reference detector or calibrated attenuators. Neither does it employ time-resolved generation and detection. The method applies to any single-photon detector regardless of the detection technology. Contrary to general belief, dead time is not the only effect responsible for saturation of the SPADs; we discover supra-linear behavior of SPADs and show that it cannot be fully explained using known theoretical models. Furthermore, we explore the nonlinearity of SNSPDs for various values of bias current and identify super- and sub-linear behavior caused by the interplay of recovery processes, latching, and two-photon sensitivity. Because of single-photon detector complex working principles, the direct absolute measurement of nonlinearity is the preferred way how to analyze the detector response.
+[![preprint](https://img.shields.io/badge/arXiv-2109.08347-b31b1b.svg)](https://arxiv.org/abs/2109.08347)
 
-**Data and code availability:**
+This repository provides the data for the manuscript *Experimental observation of anomalous supralinear response of single-photon detectors* available as preprint on [arXiv:2109.08347](https://arxiv.org/abs/2109.08347)
 
-(a) Nonlinearity: Raw data used to produce all experimental figures in the manuscript (Figs. 3 and 4) are available in folders *SPADs* and *SNSPD*. Speciffic datasets are arranged in the three columns: detection rate recorded for the beam A, for the beam B, and for both beams simultaneously impinging the detector AB. Each illumination level is repeated 30 times. Measurement time was set to 20 s.
+Tested with Python >= 3.8.13, matplotlib 3.5.1, numpy 1.21.5, scipy 1.7.3, re 2.2.1, sympy 1.10.1, lmfit 1.0.3.
 
-(b) Relative Allan deviation: Data from stability measurement and Python script to calculate relative Allan deviation are avaible in the folder *Stability*
+## SNSPD
+
+Contains all data relevant to the SNSPD. The bias current values are contained in the file names. Each data file consists of one entry per line. 
+
+| File              | Entry format                | Note                                       |
+|-------------------|-----------------------------|--------------------------------------------|
+| SNSPD_DC.txt*     | [dark count rate] [+-error] |                                            |
+| SNSPD_eff.txt*    | [efficiency] [+-error]      | measured relative to spec for 25 microAmps |
+| SNSPD_effplot.txt | [bias current] [efficiency] | manufacturer's specs                       |
+| deadtime.dat*     | [dead time] [+-error]       |                                            |
+| i[XXX].txt        | [A] [B] [AB]                | counts; 20 repetitions, 30 s meas. time    |
+
+\* each entry corresponds to a bias current XXX
+
+The script `process_SNSPD.py` imports and processes all the data and draws Fig. 4 of the main text.
+
+## SPADs
+
+Contains all measured counts for the SPADs. Each text file is in the same format as the counts for the SNSPD, except there are 30 repetitions and 20 s measurement time.
+
+The script `process_SPADs.py` imports and processes all the data. Fitting both paralyzing and nonparalyzing models is included.
+
+The Jupyter notebook `model_corrections.ipynb` provides the analysis of the counts corrected for dead time and dark counts. Fig. 7 from the supplemental material is reproduced from scratch with all technical steps explicitly given in the form of code and notes.
+
+## Stability
+
+Both text files contain a series of intensities measured during a 12-hour stability measurement. The file `stability_SLED.txt` represents the source alone, while `stability_SLED_NL.txt` includes the whole measurement setup. The script `Allan_deviation.py` computes the Allan deviations and draws the plots in Fig. 2 of the supplemental material.
