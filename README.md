@@ -21,7 +21,7 @@ Contains all data relevant to the SNSPD. The bias current values are contained i
 
 \* each entry corresponds to a bias current XXX
 
-The script `process_SNSPD.py` imports and processes all the data and draws Fig. 4 of the main text.
+The script `process_SNSPD.py` imports and processes all the data and draws Fig. 4.
 
 ## SPADs
 
@@ -29,8 +29,8 @@ Contains all measured counts for the SPADs. Each text file is in the same format
 
 The script `process_SPADs.py` imports and processes all the data. Fitting both paralyzing and nonparalyzing models is included.
 
-The Jupyter notebook `model_corrections.ipynb` provides the analysis of the counts corrected for dead time and dark counts. Fig. 7 from the supplemental material is reproduced from scratch with all technical steps explicitly given in the form of code and notes.
+The Jupyter notebook `model_corrections.ipynb` provides the analysis of the counts corrected for dead time and dark counts. Fig. 11 is reproduced from scratch with all technical steps explicitly given in the form of code and notes.
 
 ## Stability
 
-Both text files contain a series of intensities measured during a 12-hour stability measurement. The file `stability_SLED.txt` represents the source alone, while `stability_SLED_NL.txt` includes the whole measurement setup. The script `Allan_deviation.py` computes the Allan deviations and draws the plots in Fig. 2 of the supplemental material.
+Both text files contain a series of intensities measured during a 12-hour stability measurement. The file `stability_SLED.txt` represents the source alone, while `stability_SLED_NL.txt` includes the whole measurement setup. The script `Allan_deviation.py` computes the Allan deviations and draws the plots in Fig. 6.
