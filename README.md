@@ -31,6 +31,13 @@ The script `process_SPADs.py` imports and processes all the data. Fitting both p
 
 The Jupyter notebook `model_corrections.ipynb` provides the analysis of the counts corrected for dead time and dark counts. Fig. 11 is reproduced from scratch with all technical steps explicitly given in the form of code and notes.
 
+The Jupyter notebook `afterpulses_difference.ipynb` shows how much the nonlinearity would change if the full temporal distribution of afterpulses was taken into account. The detector taken as an example is SPAD-1 with its afterpulsing distribution provided in the `afterpulsing` folder \[1,2\]. Fig. 13 is drawn.
+
 ## Stability
 
 Both text files contain a series of intensities measured during a 12-hour stability measurement. The file `stability_SLED.txt` represents the source alone, while `stability_SLED_NL.txt` includes the whole measurement setup. The script `Allan_deviation.py` computes the Allan deviations and draws the plots in Fig. 6.
+
+## References
+
+* \[1\] I. Straka, J. Grygar, J. Hloušek and M. Ježek, *Counting Statistics of Actively Quenched SPADs Under Continuous Illumination*, Journal of Lightwave Technology 38, 4765 - 4771 (2020). https://doi.org/dzmt
+* \[2\] I. Straka, J. Grygar, J. Hloušek and M. Ježek, https://doi.org/10.24433/CO.8487128.v1, *Counting Statistics of Actively Quenched SPADs Under Continuous Illumination*, CodeOcean capsule (2020).
