@@ -21,13 +21,13 @@ Contains all data relevant to the SNSPD. The bias current values are contained i
 
 \* each entry corresponds to a bias current XXX
 
-The script `process_SNSPD.py` imports and processes all the data and draws Fig. 4.
+The Jupyter notebook `SNSPD_data.ipynb` imports and processes all the data and draws Fig. 4.
 
 ## SPADs
 
 Contains all measured counts for the SPADs. Each text file is in the same format as the counts for the SNSPD, except there are 30 repetitions and 20 s measurement time.
 
-The script `process_SPADs.py` imports and processes all the data. Fitting both paralyzing and nonparalyzing models is included.
+The Jupyter notebook `SPAD_data.ipynb` imports and processes all the data. Fitting both paralyzing and nonparalyzing models is included.
 
 The Jupyter notebook `model_corrections.ipynb` provides the analysis of the counts corrected for dead time and dark counts. Fig. 11 is reproduced from scratch with all technical steps explicitly given in the form of code and notes.
 
