@@ -3,7 +3,7 @@ Josef Hloušek, Ivo Straka, Miroslav Ježek (Palacký University Olomouc)
 
 [![preprint](https://img.shields.io/badge/arXiv-2109.08347-b31b1b.svg)](https://arxiv.org/abs/2109.08347)
 
-This repository provides the data for the manuscript *Experimental observation of anomalous supralinear response of single-photon detectors* available as preprint on [arXiv:2109.08347](https://arxiv.org/abs/2109.08347)
+This repository provides the data for the manuscript [*Experimental observation of anomalous supralinear response of single-photon detectors*](https://doi.org/10.1063/5.0106987) also freely available as a preprint on [arXiv:2109.08347](https://arxiv.org/abs/2109.08347).
 
 Tested with Python >= 3.8.13, matplotlib 3.5.1, numpy 1.21.5, scipy 1.7.3, re 2.2.1, sympy 1.10.1, lmfit 1.0.3.
 
